@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projeto.Views.DetailsPage"
+             Title="{Binding Title}"
+             BackgroundColor="{StaticResource PrimaryColor}">
+
+    <ScrollView>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="180" />
+                <RowDefinition Height="Auto"/>
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+            <Image Source="{Binding Item.ImageUrl}" BackgroundColor="{StaticResource PrimaryColor}"/>
+
+            <StackLayout Orientation="Vertical" Grid.Row="1" BackgroundColor="White" Padding="20">
+                <Label Text="{Binding Item.Name}" FontSize="Large" TextColor="{StaticResource PrimaryDarkColor}" />
+                <Label Text="{Binding Item.Tagline}" FontSize="Medium" TextColor="DimGray"/>
+            </StackLayout>
+
+            <StackLayout Padding="20" Grid.Row="2" Orientation="Vertical" VerticalOptions="StartAndExpand">
+                <Label Text="DESCRIPTION" FontSize="Medium" TextColor="White" />
+                <BoxView BackgroundColor="WhiteSmoke" HeightRequest="1" Margin="0,3,0,3" />
+                <Label Text="{Binding Item.Description}" FontSize="Small" TextColor="WhiteSmoke" />
+
+                <Label Text="INGREDIENTS" FontSize="Medium" TextColor="White" />
+                <BoxView BackgroundColor="WhiteSmoke" HeightRequest="1" Margin="0,3,0,3" />
+
+
+                <Label Text="YEAST:" FontSize="Medium" TextColor="White" />
+                <Label Margin="30,0,0,0" Text="{Binding Item.Ingredients.Yeast}" FontSize="Small" TextColor="White" />
+
+                <ListView x:Name="listView"
+                  IsGroupingEnabled="true"        
+                  SeparatorVisibility="None"
+                  HasUnevenRows="True"
+                  ItemsSource="{Binding Ingredients}"                                     
+                  CachingStrategy="RecycleElement">
+                    <ListView.GroupHeaderTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid>
+                                    <Label Text="{Binding GroupName}"  FontSize="Medium" TextColor="White"/>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.GroupHeaderTemplate>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Grid Padding="0" >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition />
+                                        <ColumnDefinition Width="Auto" />
+                                    </Grid.ColumnDefinitions>
+                                    <Label Margin="30,0,0,0" Text="{Binding Name}" FontSize="Small" TextColor="White"/>
+                                    <StackLayout Orientation="Horizontal" Grid.Column="1" HorizontalOptions="End">
+                                        <Label Text="{Binding Amount.Value}" FontSize="Small" TextColor="White"/>
+                                        <Label Text="{Binding Amount.Unit}" FontSize="Small" TextColor="White"/>
+                                    </StackLayout>
+                                    
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+
+
+        </Grid>
+    </ScrollView>
+</ContentPage>

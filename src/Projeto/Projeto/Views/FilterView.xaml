@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projeto.Views.FilterView"
+             Title="Filtrar">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition Height="60" />
+            </Grid.RowDefinitions>
+
+            <Grid VerticalOptions="Fill">
+                
+            </Grid>
+            
+            <Grid Grid.Row="1" Padding="10" HeightRequest="50">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+
+                <Button Text="Filtrar" Style="{StaticResource PrimaryDarkButton}" FontSize="Small" />
+            </Grid>
+
+        </Grid>
+        
+    </ContentPage.Content>
+</ContentPage>

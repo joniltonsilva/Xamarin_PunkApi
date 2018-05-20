@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Projeto.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <!-- COLORS -->
+            <Color x:Key="PrimaryColor">#6859a5</Color>
+            <Color x:Key="PrimaryDarkColor">#5a4d94</Color>
+            <Color x:Key="AccentColor">#9e9e9e</Color>
+            <Color x:Key="BackgroundColor">#5a4d94</Color>
+
+            <Color x:Key="Gray">#D6D6D6</Color>
+            <Color x:Key="DarkGray">#A7A7A7</Color>
+            <Color x:Key="LightGray">#EFEFEF</Color>
+            <Color x:Key="White">#FFFFFF</Color>
+            <Color x:Key="Red">#F44336</Color>
+            <Color x:Key="Blue">#2196F3</Color>
+
+            <Color x:Key="AlphaPrimary">#bb6859a5</Color>
+
+            <!-- Button -->
+            <Style x:Key="BaseButton" TargetType="Button">
+                <!--<Setter Property="FontFamily">
+                    <Setter.Value>
+                        <OnPlatform x:TypeArguments="x:String">
+                            <On Platform="iOS">OpenSans</On>
+                            <On Platform="Android">Fonts/OpenSans-Regular.ttf#OpenSans</On>
+                        </OnPlatform>
+                    </Setter.Value>
+                </Setter>-->
+                <!--  Custom button style  -->
+                <!--<Setter Property="HeightRequest" Value="40"/>-->
+                <Setter Property="BorderRadius" Value="4" />
+                <Setter Property="BorderWidth" Value="0" />
+                <Setter Property="FontSize" Value="14" />
+            </Style>
+
+            <Style x:Key="GrayButton" TargetType="Button" BasedOn="{StaticResource BaseButton}">
+                <Setter Property="BackgroundColor" Value="{StaticResource Gray}" />
+                <Setter Property="TextColor" Value="{StaticResource DarkGray}" />
+            </Style>
+
+            <Style x:Key="DarkGrayButton" TargetType="Button" BasedOn="{StaticResource BaseButton}">
+                <Setter Property="BackgroundColor" Value="{StaticResource DarkGray}" />
+                <Setter Property="TextColor" Value="{StaticResource White}" />
+            </Style>
+
+            <Style x:Key="PrimaryDarkButton" TargetType="Button" BasedOn="{StaticResource BaseButton}">
+                <Setter Property="BackgroundColor" Value="{StaticResource PrimaryDarkColor}" />
+                <Setter Property="TextColor" Value="{StaticResource White}" />
+                <Setter Property="FontSize" Value="14" />
+            </Style>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
