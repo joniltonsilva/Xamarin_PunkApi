@@ -8,8 +8,8 @@ Projeto feito em Xamarin Forms, consumo da Api Punk;
 
 # Recursos utilizados
 
-[Plugin Settings](https://github.com/jamesmontemagno/SettingsPlugin)
-[InfiniteScrolling](https://github.com/mattleibow/InfiniteScrolling)
+- [Plugin Settings](https://github.com/jamesmontemagno/SettingsPlugin)
+- [InfiniteScrolling](https://github.com/mattleibow/InfiniteScrolling)
 
 # Atualizações pendentes
 
