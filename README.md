@@ -16,3 +16,20 @@ Projeto feito em Xamarin Forms, consumo da Api Punk;
 - [ ] Adicionar plugin [ffImageLoading](https://github.com/luberda-molinet/FFImageLoading) para melhor carregamento das imagens
 - [ ] Adicionar tela de filtro
 
+# Images
+
+## Listagem 
+<br />
+<img src="https://github.com/joniltonsilva/Xamarin_PunkApi/blob/master/images/Screenshot_20180521-095442.png" width="200">
+
+## Detalhes
+<br />
+<img src="https://github.com/joniltonsilva/Xamarin_PunkApi/blob/master/images/Screenshot_20180521-095455.png" width="200">
+
+## Detalhes 2
+<br />
+<img src="https://github.com/joniltonsilva/Xamarin_PunkApi/blob/master/images/Screenshot_20180521-095512.png" width="200">
+
+## Listagem de Favoritos
+<br />
+<img src="https://github.com/joniltonsilva/Xamarin_PunkApi/blob/master/images/Screenshot_20180521-095536.png" width="200">
